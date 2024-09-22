@@ -18,37 +18,69 @@
     <!-- tailwind customization -->
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              },
-              fontFamily:{
-                lexend:'Lexend'
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        primary: '#B4F461',
+                        secondary: '#F9F7F3'
+                    },
+                    fontFamily: {
+                        lexend: 'Lexend'
+                    }
+                }
             }
-          }
         }
-      </script>
-      
+    </script>
+
 </head>
 
 <body class="font-lexend">
-<header>
-    <!-- navigation -->
-    <div class="navbar bg-base-100">
-        <div class="navbar-start">
-          
-          <a class="btn btn-ghost text-xl">daisyUI</a>
+    <header class="  mb-8 ">
+        <!-- navigation -->
+        <div class=" bg-secondary">
+            <div class="navbar container mx-auto py-8 mb-14">
+                <div class="navbar-start">
+                    <a class="btn font-bold md:text-xl bg-primary">Blog</a>
+                </div>
+                <div class="navbar-center ">
+                    <img src="assets/logo.png" alt="">
+                    <h2 class=" ml-3 font-bold text-xl ">
+                        Donate <span class="block md:inline">Bangladesh</span>
+                    </h2>
+                </div>
+                <div class="navbar-end">
+                    <h2><img src="assets/coin.png" class="inline pr-1" alt=""> <span>5500</span> BDT</h2>
+                </div>
+            </div>
         </div>
-        <div class="navbar-center ">
-          <h2 class="font-bold">Donate Bangladesh</h2>
+        <!-- button -->
+        <div class="flex justify-center gap-4 ">
+            <button class="btn bg-primary">Donate</button>
+            <button class="btn">History</button>
         </div>
-        <div class="navbar-end">
-          <a class="btn">Button</a>
+    </header>
+    <main class="container mx-auto">
+        <!-- donation area div -->
+        <div class="flex border p-8 rounded-xl gap-8 flex-col lg:flex-row">
+            <figure class="basis-3/6">
+                <img class="w-full" src="assets/noakhali.png" alt="">
+            </figure>
+            <div class="basis-3/6 flex flex-col justify-between gap-4">
+                <button class="text-start"><img src="assets/coin.png" class="inline " alt="golden coin"> <span>0</span>
+                    BDT</button>
+                <h2 class="font-bold text-xl">Donate for Flood at Noakhali, Bangladesh</h2>
+                <p class="text-[#111111B3] "> The recent floods in Noakhali have caused significant damage to homes
+                    infrastructure. Your donation
+                    will help provide essential supplies and to those affected by this disaster. Every contribution, big
+                    or small, makes difference. Please join us in supporting the relief efforts and making a positive
+                    impact on the lives of those in need.</p>
+                <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+                <button class="btn bg-primary font-bold text-xl w-full">Donate Now</button>
+            </div>
         </div>
-      </div>
-</header>
+
+    </main>
 </body>
 
 </html>
