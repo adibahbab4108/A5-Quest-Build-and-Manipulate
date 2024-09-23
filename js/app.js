@@ -1,20 +1,44 @@
 const donateBtns = document.querySelectorAll("#donate-btn");
-const myBalance = document.getElementById('my-balance');
+let myBalance = parseFloat(document.getElementById('my-balance').innerText);
 const historySectionBtn = document.getElementById('history-section-btn');
 const donationSectionBtn = document.getElementById('donate-section-btn');
 
 
-// getCurrentDateTimeLocation();
+
 //All Donate Button Click Operation
 for (const donateBtn of donateBtns) {
     donateBtn.addEventListener('click', function () {
         let donatedAmount = parseFloat(getDonatedAmount(donateBtn));
+        console.log("current", myBalance, donatedAmount)
+
+        if (myBalance < donatedAmount) {
+            donateBtn.parentElement.querySelector('.balance-caution').classList.remove('hidden');
+            return;
+        }
+
+        donateBtn.parentElement.querySelector('.balance-caution').classList.add('hidden');
+        myBalance -= donatedAmount;
+
         setDonatedAmount(donatedAmount, donateBtn);
-        updateMyBalance(myBalance, donatedAmount, donateBtn);
-        getDonatedLocation(donateBtn);
+        updateMyBalance(myBalance, donatedAmount);
+        getDonationdLocationName(donateBtn);
         addTransactionToHistory(donatedAmount)
     })
+
+
+    const inputField = donateBtn.parentElement.querySelector('input')
+    inputField.addEventListener('input', function () {
+        const amount = parseFloat(inputField.value);
+        console.log(amount)
+        if (amount > 0 && myBalance>=amount) {
+            return donateBtn.setAttribute('onclick', 'my_modal_5.showModal()')
+        } else {
+            return donateBtn.removeAttribute('onclick');
+        }
+    })
 }
+
+
 
 // Donate Section Button click Operation
 donationSectionBtn.addEventListener('click', function () {

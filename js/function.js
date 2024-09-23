@@ -1,32 +1,30 @@
 function getDonatedAmount(donateBtn) {
     const val = parseFloat(donateBtn.parentElement.querySelector('input').value);
-    donateBtn.parentElement.querySelector('input').value = "";
-
+    
     //input validation
     if (val <= 0 || isNaN(val)) {
         alert("Invalid input");
         return 0;
     }
+    donateBtn.parentElement.querySelector('input').value = "";
     return val;
 }
+
 function setDonatedAmount(donatedAmount, donateBtn) {
-    let totalDonatedAmount = parseFloat(donateBtn.parentElement.querySelector('#donated-amount').innerText);
+    let totalDonatedAmount = parseFloat(donateBtn.parentElement.querySelector('.donated-amount').innerText);
     totalDonatedAmount += donatedAmount;
-    donateBtn.parentElement.querySelector('#donated-amount').innerText = totalDonatedAmount;
+    donateBtn.parentElement.querySelector('.donated-amount').innerText = totalDonatedAmount;
 
 }
 
-function updateMyBalance(myBalance, donatedAmount, donateBtn) {
-    myBalance = parseFloat(myBalance.innerText);
-    const myCurrentBalance = myBalance - donatedAmount;
-    // console.log(myBalance)
+function updateMyBalance(myCurrentBalance) {
+
     document.querySelector('#my-balance').innerText = myCurrentBalance;
 }
 
 let text = '';
-function getDonatedLocation(donateBtn) {
+function getDonationdLocationName(donateBtn) {
     text = donateBtn.parentElement.querySelector('#donate-location').innerText;
-    console.log(text)
 }
 
 
@@ -40,7 +38,6 @@ const options = {
 const formattedDate = date.toLocaleString('en-US', options);
 const countryName = new Intl.DisplayNames([navigator.language], { type: 'region' }).of('BD');
 dateTimeLocation = `${formattedDate} (${countryName} Standard Time)`;
-console.log(dateTimeLocation)
 
 
 function addTransactionToHistory(donatedAmount,) {
