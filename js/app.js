@@ -25,7 +25,7 @@ for (const donateBtn of donateBtns) {
         addTransactionToHistory(donatedAmount)
     })
 
-
+    //for some validation and Modals 
     const inputField = donateBtn.parentElement.querySelector('input')
     inputField.addEventListener('input', function () {
         const amount = parseFloat(inputField.value);

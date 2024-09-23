@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!--DaisyUI and tailwind cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google-font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        primary: '#B4F461',
+                        secondary: '#F9F7F3'
+                    },
+                    fontFamily: {
+                        lexend: 'Lexend'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-lexend">
+    <!-- Header Section -->
+    <header class="mb-8 sticky top-0 backdrop-blur-md z-10">
+        <!-- navigation -->
+        <div class=" bg-secondary">
+            <div class="navbar container mx-auto py-8 mb-8">
+                <div class="navbar-start">
+                    <a class="btn font-bold md:text-xl bg-primary" href="index.html">Home</a>
+                </div>
+                <div class="navbar-center ">
+                    <img src="assets/logo.png" alt="">
+                    <h2 class=" ml-3 font-bold text-xl ">
+                        Donate <span class="block md:inline">Bangladesh</span>
+                    </h2>
+                </div>
+                <div class="navbar-end">
+                    <h2><img src="assets/coin.png" class="inline pr-1" alt=""> <span id="my-balance">450000</span> BDT
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- FAQ section -->
+    <div class="container mx-auto">
+        <h1 class="text-4xl font-bold mb-6 ml-8">Important FAQ</h1>
+        <div class="flex flex-col gap-6 mx-8">
+            <div class="collapse bg-base-200">
+                <input type="radio" name="my-accordion-1" checked="checked" />
+                <div class="collapse-title text-2xl font-medium">1. What are the primary causes supported by your
+                    donations?</div>
+                <div class="collapse-content text-lg text-gray-500">
+                    <p>We focus on several key areas, including:</p>
+                    <ul class="list-disc pl-8">
+                        <li>Relief for flood-affected areas such as Feni, Sylhet, Noakhali, and Cox's Bazar.</li>
+                        <li>Medical aid and rehabilitation for those injured in the quota movement.</li>
+                        <li>Poverty alleviation through sustainable development programs.</li>
+                        <li>Educational support and empowerment for underprivileged children and communities.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="collapse bg-base-200">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-2xl font-medium">2. How is my donation used in flood-affected areas?</div>
+                <div class="collapse-content text-lg text-gray-500">
+                    <p>Your donation helps provide emergency relief, including food, clean water, shelter, and medical
+                        assistance, to families affected by flooding in Feni, Sylhet, Noakhali, and Cox's Bazar.
+                        Long-term efforts also focus on rebuilding homes, schools, and infrastructure.</p>
+                </div>
+            </div>
+            <div class="collapse bg-base-200">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-2xl font-medium">3. How can I ensure that my donation reaches the people in
+                    need?</div>
+                <div class="collapse-content text-lg text-gray-500">
+                    <p>We partner with local NGOs and volunteers to ensure that aid is distributed directly to those in
+                        need. Regular reports and updates are shared with donors about how and where funds are utilized.
+                    </p>
+                </div>
+            </div>
+            <div class="collapse bg-base-200">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-2xl font-medium">4. How do you help individuals injured during the quota
+                    movement?</div>
+                <div class="collapse-content text-lg text-gray-500">
+                    <p>We provide medical care, rehabilitation, and psychological support for people injured during the
+                        quota movement protests. We also support families in managing medical expenses and ensure
+                        long-term recovery assistance.</p>
+                </div>
+            </div>
+            <div class="collapse bg-base-200">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-2xl font-medium">5. Can I choose which cause my donation supports?</div>
+                <div class="collapse-content text-lg text-gray-500">
+                    <p>Yes, when making a donation, you can specify whether you want to support flood relief, medical
+                        aid for the quota movement, poverty alleviation, or educational programs for underprivileged
+                        communities.</p>
+                </div>
+            </div>
+            <div class="collapse bg-base-200">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-2xl font-medium">6. What are the long-term strategies for poverty
+                    alleviation?</div>
+                <div class="collapse-content text-lg text-gray-500">
+                    <p>Our poverty alleviation programs focus on skill development, microfinance initiatives, and small
+                        business support to help families become self-sufficient. We also prioritize access to
+                        education, healthcare, and clean water.</p>
+                </div>
+            </div>
+            <div class="collapse bg-base-200">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-2xl font-medium">7. How can I help underprivileged children in Bangladesh?
+                </div>
+                <div class="collapse-content text-lg text-gray-500">
+                    <p>You can contribute to our education and nutrition programs that provide school supplies, meals,
+                        and scholarships to underprivileged children. We also run mentorship programs to encourage them
+                        to pursue higher education and vocational training.</p>
+                </div>
+            </div>
+            <div class="collapse bg-base-200">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-2xl font-medium">8. Can I volunteer to help in these efforts?</div>
+                <div class="collapse-content text-lg text-gray-500">
+                    <p>Yes, we welcome volunteers both locally and internationally. You can participate in on-ground
+                        relief work in flood-affected areas, mentor underprivileged children, or help us raise awareness
+                        through online campaigns.</p>
+                </div>
+            </div>
+            <div class="collapse bg-base-200">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-2xl font-medium">9. How do you ensure transparency in the use of donations?
+                </div>
+                <div class="collapse-content text-lg text-gray-500">
+                    <p>We maintain full transparency by publishing detailed financial reports, including how donations
+                        are spent. We also provide regular updates on our projects and success stories to keep donors
+                        informed.</p>
+                </div>
+            </div>
+            <div class="collapse bg-base-200">
+                <input type="radio" name="my-accordion-1" />
+                <div class="collapse-title text-2xl font-medium">10. Are there tax benefits for donating to this cause?
+                </div>
+                <div class="collapse-content text-lg text-gray-500">
+                    <p>Yes, donations made to registered charitable organizations may be eligible for tax deductions.
+                        Please consult with your local tax advisor to determine eligibility based on your country's
+                        laws.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

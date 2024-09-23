@@ -41,7 +41,7 @@
         <div class=" bg-secondary">
             <div class="navbar container mx-auto py-8 mb-8">
                 <div class="navbar-start">
-                    <a class="btn font-bold md:text-xl bg-primary">Blog</a>
+                    <a class="btn font-bold md:text-xl bg-primary" href="blog.html">Blog</a>
                 </div>
                 <div class="navbar-center ">
                     <img src="assets/logo.png" alt="">
@@ -64,7 +64,30 @@
     <main class="container mx-auto">
         <!-- donation area section -->
         <div id="donation-section" class="flex flex-col gap-6">
-            <!-- First post -->
+
+            <!-- post -->
+            <div class="flex border p-8 rounded-xl gap-8 flex-col lg:flex-row">
+                <figure class="basis-3/6">
+                    <img class="w-full rounded-2xl" src="assets/underprivilaged.jpg" alt="">
+                </figure>
+                <div class="basis-3/6 flex flex-col justify-between gap-4">
+                    <button class="text-start"><img src="assets/coin.png" class="inline " alt="golden coin">
+                        <span class="donated-amount">0</span>
+                        BDT</button>
+                    <h2 class="font-bold text-xl">Donate for <span id="donate-location">underprivilaged people in
+                            Bangladesh</span></h2>
+                    <p class="text-[#111111B3] ">Millions of underprivileged people in Bangladesh face daily struggles
+                        due to lack of access to basic necessities such as education, healthcare, and clean water. By contributing to programs that focus on education,
+                        skill development, healthcare access, and social support, you can help underprivileged children
+                        and families build a brighter, more secure future. </p>
+                    <div>
+                        <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+                        <small class="p-3 text-red-700 balance-caution hidden">⚠️ Insufficient balance</small>
+                    </div>
+                    <button id="donate-btn" class="btn bg-primary font-bold text-xl w-full">Donate Now</button>
+                </div>
+            </div>
+            <!-- post -->
             <div class="flex border p-8 rounded-xl gap-8 flex-col lg:flex-row">
                 <figure class="basis-3/6">
                     <img class="w-full" src="assets/noakhali.png" alt="">
@@ -84,12 +107,37 @@
                         impact on the lives of those in need.</p>
                     <div>
                         <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-                        <small class="p-3 text-red-700 balance-caution hidden">Insufficient balance</small>
+                        <small class="p-3 text-red-700 balance-caution hidden">⚠️ Insufficient balance</small>
                     </div>
                     <button id="donate-btn" class="btn bg-primary font-bold text-xl w-full">Donate Now</button>
                 </div>
             </div>
-            <!-- Second Post -->
+           
+            <div class="flex border p-8 rounded-xl gap-8 flex-col lg:flex-row">
+                <figure class="basis-3/6">
+                    <img class="w-full rounded-2xl" src="assets/poverty.jpg" alt="">
+                </figure>
+                <div class="basis-3/6 flex flex-col justify-between gap-4">
+                    <button class="text-start"><img src="assets/coin.png" class="inline " alt="golden coin">
+                        <span class="donated-amount">0</span>
+                        BDT</button>
+                    <h2 class="font-bold text-xl">Donate for <span id="donate-location">Poor People in
+                            Bangladesh</span></h2>
+                    <p class="text-[#111111B3] "> Poverty remains a significant challenge for millions of people across
+                        Bangladesh, with many struggling to meet basic needs like food, shelter, healthcare, and
+                        education. By supporting poverty alleviation programs, you are providing families with access
+                        to essential resources, creating opportunities for children to receive education, and empowering
+                        individuals through skill development and sustainable livelihood initiatives. Join us in
+                        creating a more equitable Bangladesh by donating today.
+                    </p>
+                    <div>
+                        <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+                        <small class="p-3 text-red-700 balance-caution hidden">⚠️ Insufficient balance</small>
+                    </div>
+                    <button id="donate-btn" class="btn bg-primary font-bold text-xl w-full">Donate Now</button>
+                </div>
+            </div>
+            <!--  Post -->
             <div class="flex border p-8 rounded-xl gap-8 flex-col lg:flex-row">
                 <figure class="basis-3/6">
                     <img class="w-full" src="assets/feni.png" alt="">
@@ -108,13 +156,13 @@
                         those in urgent need.</p>
                     <div>
                         <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-                        <small class="p-3 text-red-700 balance-caution hidden">Insufficient balance</small>
+                        <small class="p-3 text-red-700 balance-caution hidden">⚠️ Insufficient balance</small>
                     </div>
 
                     <button id="donate-btn" class="btn bg-primary font-bold text-xl w-full">Donate Now</button>
                 </div>
             </div>
-            <!-- Third Post -->
+            <!--  Post -->
             <div class="flex border p-8 rounded-xl gap-8 flex-col lg:flex-row">
                 <figure class="basis-3/6">
                     <img class="w-full" src="assets/quota-protest.png" alt="">
@@ -134,11 +182,36 @@
                         need.</p>
                     <div>
                         <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-                        <small class="p-3 text-red-700 balance-caution hidden">Insufficient balance</small>
+                        <small class="p-3 text-red-700 balance-caution hidden"> ⚠️ Insufficient balance</small>
                     </div>
                     <button id="donate-btn" class="btn bg-primary font-bold text-xl w-full">Donate Now</button>
                 </div>
             </div>
+            <!--  post -->
+            <div class="flex border p-8 rounded-xl gap-8 flex-col lg:flex-row">
+                <figure class="basis-3/6">
+                    <img class="w-full rounded-2xl" src="assets/floodInCoxBazar.jpeg" alt="">
+                </figure>
+                <div class="basis-3/6 flex flex-col justify-between gap-4">
+                    <button class="text-start"><img src="assets/coin.png" class="inline " alt="golden coin">
+                        <span class="donated-amount">0</span>
+                        BDT</button>
+                    <h2 class="font-bold text-xl">Donate for <span id="donate-location">Flood at Cox's Bazar,
+                            Bangladesh</span></h2>
+                    <p class="text-[#111111B3] "> The devastating floods in Cox's Bazar have caused widespread
+                        destruction, leaving homes and vital infrastructure in ruins. Thousands of families have been
+                        displaced, facing dire conditions and urgent needs. Every contribution, whether large or small, plays a
+                        crucial role in rebuilding lives and restoring hope to the impacted communities. Join us in
+                        making a lasting, positive difference for the people of Cox's Bazar during this challenging
+                        time.</p>
+                    <div>
+                        <input type="number" placeholder="Write Donation Amount" class="input input-bordered w-full " />
+                        <small class="p-3 text-red-700 balance-caution hidden">⚠️ Insufficient balance</small>
+                    </div>
+                    <button id="donate-btn" class="btn bg-primary font-bold text-xl w-full">Donate Now</button>
+                </div>
+            </div>
+
         </div>
         <!-- History section -->
         <div id="history-section" class="flex flex-col gap-6 hidden">

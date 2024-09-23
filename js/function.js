@@ -28,6 +28,7 @@ function getDonationdLocationName(donateBtn) {
 }
 
 
+//Time, Date and Location
 let dateTimeLocation = '';
 const date = new Date();
 const options = {
@@ -42,7 +43,7 @@ dateTimeLocation = `${formattedDate} (${countryName} Standard Time)`;
 
 function addTransactionToHistory(donatedAmount,) {
     document.getElementById('history-section').innerHTML += `
-         <div class="p-4 border rounded-lg">
+         <div class="p-6 border rounded-lg">
                 <h2 class="font-bold mb-4">${donatedAmount} Taka is Donated for ${text} </h2>
                 <small class="text-gray-400"> Date: ${dateTimeLocation} </small>
             </div>
