@@ -1,6 +1,6 @@
 function getDonatedAmount(donateBtn) {
     const val = parseFloat(donateBtn.parentElement.querySelector('input').value);
-    
+
     //input validation
     if (val <= 0 || isNaN(val)) {
         alert("Invalid input");
@@ -41,11 +41,14 @@ const countryName = new Intl.DisplayNames([navigator.language], { type: 'region'
 dateTimeLocation = `${formattedDate} (${countryName} Standard Time)`;
 
 
-function addTransactionToHistory(donatedAmount,) {
-    document.getElementById('history-section').innerHTML += `
+function addTransactionToHistory(donatedAmount) {
+    if (donatedAmount <= 0) return;
+    else {
+        document.getElementById('history-section').innerHTML += `
          <div class="p-6 border rounded-lg">
                 <h2 class="font-bold mb-4">${donatedAmount} Taka is Donated for ${text} </h2>
                 <small class="text-gray-400"> Date: ${dateTimeLocation} </small>
             </div>
     `
+    }
 }

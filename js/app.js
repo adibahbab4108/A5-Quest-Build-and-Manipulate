@@ -9,7 +9,6 @@ const donationSectionBtn = document.getElementById('donate-section-btn');
 for (const donateBtn of donateBtns) {
     donateBtn.addEventListener('click', function () {
         let donatedAmount = parseFloat(getDonatedAmount(donateBtn));
-        console.log("current", myBalance, donatedAmount)
 
         if (myBalance < donatedAmount) {
             donateBtn.parentElement.querySelector('.balance-caution').classList.remove('hidden');
@@ -22,6 +21,7 @@ for (const donateBtn of donateBtns) {
         setDonatedAmount(donatedAmount, donateBtn);
         updateMyBalance(myBalance, donatedAmount);
         getDonationdLocationName(donateBtn);
+        
         addTransactionToHistory(donatedAmount)
     })
 
